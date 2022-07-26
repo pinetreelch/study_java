@@ -43,8 +43,5 @@ public class Hello {
 	System.out.println(authorcareer);
 	System.out.println(authorIntro);
 	System.out.println(tableOfcontents);
-	
-	
-
 	}
 }
