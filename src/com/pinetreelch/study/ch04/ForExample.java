@@ -80,5 +80,15 @@ public class ForExample {
 				System.out.println("0");
 			}
 		}
+		
+		System.out.println("====================");
+		
+		for(int p = 1; p <= 10; p++) {
+		for(int k =1; k <= p; k++) {
+			System.out.print(k);
+		}
+			System.out.println();
+		}
+		
 	}
 }
