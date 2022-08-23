@@ -11,7 +11,7 @@ public class IphoneExample {
 		
 		
 		iph.show();
-		System.out.println(iph.iphone[2]);
+		System.out.println("iph.iphone[2] : "+iph.iphone[2]);
 		System.out.println(car.name);
 		System.out.println(bags.backpack[2]);
 		
