@@ -36,5 +36,12 @@ public class ArithmeticOperation {
 	public void sentence (String x, String y) {
 		System.out.println(x+y);
 	}
-
+	
+	static void staticTest() {
+		System.out.println("나는 로니당");
+	}
+	
+	public String aaa(int a) {
+		return "";
+	}
 }

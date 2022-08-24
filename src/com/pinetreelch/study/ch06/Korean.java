@@ -19,4 +19,21 @@ public class Korean {
 		this.name= name;
 		this.age = age;
 	}
+	
+	static int x = 3;
+	
+	static int retu (int a) {
+		return a + 10; 
+	}
+	
+	public void ttest() {
+		ArithmeticOperation.staticTest();
+	}
+	
+	int ttest1() {
+		ArithmeticOperation arith = new ArithmeticOperation();
+		arith.aaa(3);
+		
+		return 1;
+	}
 }
