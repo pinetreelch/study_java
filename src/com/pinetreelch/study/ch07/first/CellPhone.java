@@ -4,7 +4,6 @@ public class CellPhone {
 //부모
 	
 	// 필드
-	
 	String model;
 	String color;
 	
