@@ -6,56 +6,50 @@ import java.util.Scanner;
 
 public class FlipwordOnlyEng {
 
-	public static ArrayList<String> solution(String str) {
+	public static String solution(String str) {
 
-		ArrayList<String> answer = new ArrayList<>();
-		char[] ch = str.toCharArray(); // if @@abcd
-
-		int lt = 0;
-		int rt = ch.length - 1;
-
+		String answer;
 		
-//		 while(lt < rt) { if((ch[lt] >= 97 && ch[lt] <= 122) || (ch[lt] <= 90 &&ch[lt] >= 65)) { 
-//			 char tmp = ch[lt];
-//			 
-//			 if((ch[rt] >= 97 && ch[rt] <= 122) || (ch[rt] <= 90 && ch[rt] >= 65)) {
-//				 	ch[lt] = ch[rt];
-//				 	ch[rt] = tmp; 
-//			} else { rt--; } } else { lt++; }
-//		 }
+		char[] ch = str.toCharArray(); // @abcd@
+		
+		// ch[0] = @
+		// ch[1] = a
+		// ch[2] = b
+		// cd[3] = c
+		// cd[4] = d
+		// cd[5] = @
+		
+		// char[] ch = {@, a, b, c, d, @};
+		//ch.length = 6;
+		
+		int lt = 0; // 1
+		int rt = ch.length - 1;	//5
+
 		  
 		while (lt < rt) {
-			if( (ch[lt] >= 97 && ch[lt] <= 122) || (ch[lt] <= 90 && ch[lt] >= 65) ) {
-				char tmp = ch[lt];
-				
-				if( (ch[rt] >= 97 && ch[rt] <= 122) || (ch[rt] <= 90 && ch[rt] >= 65) ) {
+			if( (ch[lt] >= 97 && ch[lt] <= 122) || (ch[lt] <= 90 && ch[lt] >= 65) ) { 		//ch[lt] = @ ch[lt] = a 
+				char tmp = ch[lt];				// ch tmp = ch[lt] = char = a;  -> char tmp = a;
+					
+				if( (ch[rt] >= 97 && ch[rt] <= 122) || (ch[rt] <= 90 && ch[rt] >= 65) ) { //ch[5] = @ -> false
 					ch[lt] = ch[rt];
 					ch[rt] = tmp;
+					
+					lt++;
+					rt--;
 				} else {
-					rt --;
+					rt --;	
 				}
 			} else {
-				lt ++;
+				lt ++; 
 			}
 		}
+
 		
-		String chString = String.valueOf(ch);
-
-		answer.add(chString);
-
+		answer = String.valueOf(ch);
+		
 		return answer;
 		
 
-//		
-//		while(lt<rt) {
-//			
-//			char tmp = ch[lt];
-//			ch[lt] = ch[rt];
-//			ch[rt] = tmp;
-//			lt ++;
-//			rt --;
-//		}
-//		
 
 
 	}
@@ -64,11 +58,8 @@ public class FlipwordOnlyEng {
 		// TODO Auto-generated method stub
 		Scanner kb = new Scanner(System.in);
 
-		String str = kb.next();
-
-		for (String x : solution(str)) {
-			System.out.println(x);
-		}
+		String str = kb.next();		
+		System.out.println(solution(str));
 
 	}
 
