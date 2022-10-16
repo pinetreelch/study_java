@@ -6,14 +6,10 @@ public class OnlyNumber {
 	
 	public static Integer solution(String str) {
 		
-		int num = 0;
-		
-		char[] ch = str.toCharArray();
-		
-		
-		
-		return num;
-		
+		String x = str.replaceAll("[^0-9]", "");
+		int ab = Integer.parseInt(x);
+	
+		return ab;
 	}
 	
 	
